@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-
+import LinkButton from './LinkButton';
 
 const DiseñoChat = {
     background: 'skyblue',
@@ -14,6 +14,13 @@ const DiseñoChat = {
     userBubbleColor: 'orange',
     userFontColor: 'white',
   };
+
+const CustomComponent = ({ text, link }) => (
+  <div>
+    <p>{text}</p>
+    <LinkButton link={link} text="Haz click aquí" />
+  </div>
+);
 
 export default class MainChatBot extends Component {
   validarNombre = (value) => {
@@ -91,20 +98,19 @@ export default class MainChatBot extends Component {
                   },
                   {
                     id: 'IAA1.1',
-                    message: 'Puedes consultar el calendario en el siguiente sitio web:https://www.udb.edu.sv/udb/eventos',
+                    component: <CustomComponent text="Puedes consultar el calendario en el siguiente sitio web:" link="https://www.udb.edu.sv/udb/eventos" />,
                     trigger: 'selectIAA',
                   },
                   {
                     id: 'IAA2.1',
-                    message: 'Puedes consultar \ntu horario de clase \nen el siguiente sitio web:\nhttps\n://admacad.udb.edu.sv/PortalWeb/',
+                    component: <CustomComponent text="Puedes consultar tu horario de clase en el siguiente sitio web:" link="https://admacad.udb.edu.sv/PortalWeb/" />,
                     trigger: 'selectIAA',
                   },
                   {
                     id: 'IAA3.1',
-                    message: 'Los periodos de inscripción ya terminaron, pero puedes consultar el siguiente sitio \nweb:https://www.udb.edu.sv/udb/eventos',
+                    component: <CustomComponent text="Los periodos de inscripción ya terminaron, pero puedes consultar el siguiente sitio web:" link="https://www.udb.edu.sv/udb/eventos" />,
                     trigger: 'selectIAA',
                   },
-
 
                   // SUBMENÚ RSC
                   {
