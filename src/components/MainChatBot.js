@@ -67,8 +67,7 @@ export default class MainChatBot extends Component {
               },
 
 
-              //SUBMENU IAA
-
+              //SUBMENU IAA.
               {
                 id: 'AyudaIAA',
                 message: "¿Que tipo de ayuda?",
@@ -101,7 +100,6 @@ export default class MainChatBot extends Component {
 
 
               //SUBMENU RSC
-
               {
                 id: 'AyudaRSC',
                 message: "¿Qué información necesitas sobre recursos y servicios en el campus?",
@@ -119,20 +117,20 @@ export default class MainChatBot extends Component {
               {
                 id: 'RSC1.1',
                 component: <CustomComponent text="Los horarios de la biblioteca son: Lunes-Viernes: 7:00am - 5:00pm y Sabado 8:00am - 12.00mm. Puedes consultar la ubicacion en el siguiente link:" link="https://www.bing.com/maps?osid=3ed0abe6-4abd-4ad4-a02d-771203ff4162&cp=13.714661~-89.160436&lvl=16.31809&pi=0&v=2&sV=2&form=S00027"/>,
-                message: 'RESPUESTA RSC1',
                 trigger: 'selectRSC',
               },
               {
                 id: 'RSC2.1',
                 component: <CustomComponent text="La universidad cuenta con una diversidad de servicios estudiantiles en los cuales puedes formar parte, aqui te dejo el link donde podras conocer mas de ellos y obtener mas informacion:" link="https://www.udb.edu.sv/udb/pagina/servicios_estudiantiles "/>,
-                message: 'RESPUESTA RSC2',
                 trigger: 'selectRSC',
               },
               {
                 id: 'RSC3.1',
-                message: 'RESPUESTA RSC3',
+                component: <CustomComponent text="Para consultar los eventos que hay el dia de hoy, verifica el siguiente link:" link="https://www.udb.edu.sv/udb/eventos/hoy"/>,
                 trigger: 'selectRSC',
               },
+
+              //SUBMENU ABE
               {
                 id: 'AyudaABE',
                 message: "¿Qué información necesitas sobre bienestar estudiantil?",
@@ -149,32 +147,28 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'ABE1.1',
-
                 component: <CustomComponent text="La universidad ofrece asistencia psicologica y psicopedagogica, para realizar consultas u obtener informacion visita el siguiente link:" link="https://www.udb.edu.sv/udb/pagina/asistencia_psicopedagogica"/>,
-
-                message: 'RESPUESTA ABE1',
-
                 trigger: 'selectABE',
               },
               {
                 id: 'ABE2.1',
-                message: 'RESPUESTA ABE2',
+                component: <CustomComponent text="La universidad promueve a los estudiantes con discapacidades brindandoles servicios y recursos que les hace sentir incluidos en el area academica, que tienen las mismas oportunidades para lograr alcanzar sus objetivos. Cuentan con rampas para poder trasladarse entre los diferentes edificios dentro del campus, de igual forma con ascensores para poder llegar a los niveles donde recibiran sus clases o laboratorios" link="https://www.udb.edu.sv/udb/pagina/somos_udb"/>,
                 trigger: 'selectABE',
               },
               {
                 id: 'ABE3.1',
-
                 component: <CustomComponent text="Con la ayuda psicopedadogica, puedes solicitar tutorias o consultar al tutor asignado en el portal web para favorecer tu adaptacion a la vida universitaria o mejorar tu rendimiento academico. Para poder ver los datos de tu tutor por favor ingresa al siguiente link, si no tienes uno asignado puedes consultar al area de Psicopedadogia para empezar el proceso de asignacion:" link="https://admacad.udb.edu.sv/EstudiantesPlus/Home"/>,
-
-                message: 'RESPUESTA ABE3',
-
                 trigger: 'selectABE',
               },
+
+              //SUBMENU OCD
               {
                 id: 'AyudaOCD',
                 message: "¿Qué información necesitas sobre el desarrollo de carrera?",
                 trigger: 'selectOCD',
               },
+
+                
               {
                 id: 'selectOCD',
                 options: [
@@ -186,29 +180,21 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'OCD1.1',
-
-                component: 'RESPUESTA OCD1',
-      message: 'RESPUESTA OCD1',
-
+                component: 'RESPUESTA OCD1', 
                 trigger: 'selectOCD',
               },
               {
                 id: 'OCD2.1',
-
                 component: 'RESPUESTA OCD2',
-                message: 'RESPUESTA OCD2',
-
                 trigger: 'selectOCD',
               },
               {
                 id: 'OCD3.1',
-
                 component: 'RESPUESTA OCD3',
-
-                message: 'RESPUESTA OCD3',
-
                 trigger: 'selectOCD',
               },
+
+              //SUBMENU VES
               {
                 id: 'AyudaVES',
                 message: "¿Qué información necesitas sobre la vida estudiantil?",
@@ -225,27 +211,17 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'VES1.1',
-
-                component: 'RESPUESTA VES1',
-
-                message: 'RESPUESTA VES1',
-
+                component: 'RESPUESTA VES1', 
                 trigger: 'selectVES',
               },
               {
                 id: 'VES2.1',
-
                 component: 'RESPUESTA VES2',
-                message: 'RESPUESTA VES2',
-
                 trigger: 'selectVES',
               },
               {
                 id: 'VES3.1',
-
                 component: 'RESPUESTA VES3',
-
-                message: 'RESPUESTA VES3',
                 trigger: 'selectVES',
               },
               {
