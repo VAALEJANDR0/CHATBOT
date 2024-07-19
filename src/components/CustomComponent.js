@@ -4,7 +4,7 @@ import LinkButton from './LinkButton';
 const CustomComponent = ({ text, link }) => (
   <div>
     <p>{text}</p>
-    <LinkButton link={link} text="Haz click aquí" />
+    {link != null && <LinkButton link={link} text="Haz click aquí" />}
   </div>
 );
 

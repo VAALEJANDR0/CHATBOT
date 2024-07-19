@@ -35,7 +35,7 @@ export default class MainChatBot extends Component {
             steps={[
               {
                 id: 'intro',
-                message: 'Bienvenido, sere tu asisntente universitario',
+                message: 'Bienvenido, seré tu asistente universitario ¿Cómo te llamas?',
                 trigger: '1',
               },
               {
@@ -180,17 +180,17 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'OCD1.1',
-                component: 'RESPUESTA OCD1', 
+                component: <CustomComponent text='Puedes contactar a nuestro equipo de orientación de carrera para encontrar ofertar laborales y prácticas para tí, mas información en el siguiente enlace:' link="https://www.udb.edu.sv/udb_r/pagina/poc_programa_de_orientacion_de_carrera"/>, 
                 trigger: 'selectOCD',
               },
               {
                 id: 'OCD2.1',
-                component: 'RESPUESTA OCD2',
+                component: <CustomComponent text="En el Programa de Orientación de Carrera (POC) de la universidad, puedes encontrar recursos y talleres para ayudarte a escribir tu currículum vitae. Para más información, visita el siguiente enlace:" link="https://www.udb.edu.sv/udb_r/pagina/poc_programa_de_orientacion_de_carrera"/>,
                 trigger: 'selectOCD',
               },
               {
                 id: 'OCD3.1',
-                component: 'RESPUESTA OCD3',
+                component: <CustomComponent text="La universidad ofrece talleres de preparación para entrevistas de trabajo. Para más información, visita el siguiente enlace:" link="https://www.udb.edu.sv/udb_r/pagina/poc_programa_de_orientacion_de_carrera"/>,
                 trigger: 'selectOCD',
               },
 
@@ -211,17 +211,17 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'VES1.1',
-                component: 'RESPUESTA VES1', 
+                component: <CustomComponent text="Puedes participar en nuestros diferentes equipos deportivos y artisticos, para más información sobre los grupos disponibles visita la siguiente página:" link="https://www.udb.edu.sv/udb_r/pagina/servicios_estudiantiles"/>, 
                 trigger: 'selectVES',
               },
               {
                 id: 'VES2.1',
-                component: 'RESPUESTA VES2',
+                component: <CustomComponent text="Los dias sábados ofrecemos cursos de idiomas en diferentes niveles, además puedes participar como voluntario en nuestro programa Science Girl Camp, para más información:" link="https://www.udb.edu.sv/udb/pagina/escidiomas"/>,
                 trigger: 'selectVES',
               },
               {
                 id: 'VES3.1',
-                component: 'RESPUESTA VES3',
+                component: <CustomComponent text="Nuestros cafetines cuentan con una amplia variedad de alimentos para todos los gustos, sin embargo el menú es rotatorio, por lo que te recomendamos consultar con el cafetín de tu preferencia el menú del día."/>,
                 trigger: 'selectVES',
               },
               {
