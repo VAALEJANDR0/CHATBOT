@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
-import CustomComponent from './CustomComponent'; // Actualiza la importación
+import CustomComponent from './CustomComponent'; 
+
+/**
+ * Explicación código:
+ * MainChatBot
+ * 
+ * Este componente define un chatbot con varios pasos de interacción.
+ * Utiliza el componente react-simple-chatbot para crear un flujo de conversación.
+ * 
+ * DiseñoChat: Contiene los estilos personalizados para el chatbot.
+ * 
+ * Función validarNombre: Valida que el nombre proporcionado por el usuario no tenga más de 50 caracteres y no contenga números.
+ * 
+ * El flujo del chatbot incluye un saludo inicial, opciones para seleccionar el tipo de ayuda y submenús con más opciones específicas.
+ */
+
 
 const DiseñoChat = {
     background: 'skyblue',
@@ -59,7 +74,7 @@ export default class MainChatBot extends Component {
                 options: [
                   { value: 'IAA', label: 'Información académica y administrativa', trigger: 'AyudaIAA' },
                   { value: 'RSC', label: 'Recursos y servicios del campus', trigger: 'AyudaRSC' },
-                  { value: 'ABE', label: 'Apoyo y bienestar estudiantil:', trigger: 'AyudaABE' },
+                  { value: 'ABE', label: 'Apoyo y bienestar estudiantil', trigger: 'AyudaABE' },
                   { value: 'OCD', label: 'Orientación sobre carrera y desarrollo profesional', trigger: 'AyudaOCD' },
                   { value: 'VES', label: 'Vida estudiantil y eventos sociales', trigger: 'AyudaVES' },
                   { value: 'NM',  label: 'Nada más', trigger: 'FIN' },
@@ -221,7 +236,7 @@ export default class MainChatBot extends Component {
               },
               {
                 id: 'VES3.1',
-                component: <CustomComponent text="Nuestros cafetines cuentan con una amplia variedad de alimentos para todos los gustos, sin embargo el menú es rotatorio, por lo que te recomendamos consultar con el cafetín de tu preferencia el menú del día."/>,
+                message:"Nuestros cafetines cuentan con una amplia variedad de alimentos para todos los gustos, sin embargo el menú es rotatorio, por lo que te recomendamos consultar con el cafetín de tu preferencia el menú del día.",
                 trigger: 'selectVES',
               },
               {
