@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EBEBEC;
+  }
+  
+  .sub{
+    display: flex;
+    justify-content: flex-end;
+    background-color: grey;
+    height: 40px;
+    padding-right: 100px;
+  }
+
+  .sub a {
+    color: black;
+    font-size: 12px;
+    background-color: #FFE000;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+
+  .sub a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último enlace */
+  }
+
+  .sub a:hover {
+    background-color: #398de2;
+    color: white;
+    transition: background-color 0.4s, color 0.4s; /* Transiciones suaves */
+  }
+
+  .menu {
+    background-color: #2A7FD4; /* Fondo celeste */
+    width: 100%; 
+    position: -webkit-sticky; /* Soporte para Safari */
+    position: sticky;
+    top: 0; /* Mantiene el menú en la parte superior */
+    z-index: 1000;  }
+  
+  .menu nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .menu nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 20px; /* Espacio adicional para abarcar todo el ancho y alto */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  }
+  
+  .menu nav a:hover {
+    color: #2A7FD4; /* Letras celestes */
+    background-color: white; /* Fondo blanco */
+    height: 100%;
+  }
+  
+  .menu nav a:hover::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: yellow; /* Línea amarilla */
+  }
+
+  nav img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle; 
+  }
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu{
+    position: static;
+  }
+  .menu-nav {
+    display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+    flex-direction: column; /* Cambia la dirección del flex para elementos verticales */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    padding: 0; /* Elimina el padding extra */
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el botón de menú */
+  }
+
+  .menu-nav.active {
+    display: flex; /* Muestra el menú cuando está activo */
+  }
+
+  .menu-nav a {
+    width: 100%; /* Los enlaces ocuparán el 100% del ancho disponible */
+    text-align: center; /* Centra el texto */
+    padding: 15px 0; /* Aumenta el padding para un toque más grande */
+    border-top: 1px solid #87CEEB; /* Añade una línea superior entre elementos */
+  }
+
+  .menu-nav a:first-child {
+    border-top: none; /* Elimina la línea superior del primer elemento */
+  }
+
+  .sub {
+    padding-left: 10px; /* Reduce el margen para pantallas pequeñas */
+  }
+
+  .sub a {
+    font-size: 14px; /* Aumenta un poco el tamaño del texto para mejor legibilidad */
+    padding: 8px 15px; /* Ajusta el padding para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu{
+    position: static;
+  }
+  .menu-nav a {
+    font-size: 14px; /* Reduce el tamaño del texto para pantallas muy pequeñas */
+    padding: 10px 0; /* Ajusta el padding para pantallas muy pequeñas */
+  }
+
+  .sub a {
+    font-size: 12px; /* Ajusta el tamaño del texto para pantallas muy pequeñas */
+    padding: 6px 10px; /* Ajusta el padding para pantallas muy pequeñas */
+  }
+}
